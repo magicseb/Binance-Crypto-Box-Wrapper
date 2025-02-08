@@ -7,9 +7,7 @@ class Config:
     # ==================================================
 
     CHATS = [
-        -1001515379979,  # Binance Crypto Box Code
-        -1001813092752,  # Binance Red packet crypto box
-        -1001610472708  # 🐋 Chat Whale Box 🎁
+        -1001889332976  # Binance Crypto Box Code
     ]
 
     # ==================================================
