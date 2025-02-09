@@ -11,7 +11,7 @@ git clone https://github.com/devbutlazy/Binance-Crypto-Box-Wrapper
 `4` Go to`cmd.exe` and type `cd PROJECT_PATH`  
 `5` Type `pip install -r requirements.txt` to install required packages  
 `6` Enter the telegram API_HASH and API_ID to `source/config.py` from [here](https://my.telegram.org/auth)    
-`7` Login to your [Binance Account](https://www.binance.com/uk-UA), go to [Binance Crypto Box](https://www.binance.com/uk-UA/my/wallet/account/payment/cryptobox) press F12 and go to `Network`. After that, enter a valid Crypto Box code. When entered, look for "grabV2" POST method in `Network` section. When found, go to POST method `Request Headers` and copy-paste all the neccessery information (cookie, device_info, id, etc...) from there to `source/config.py`.  
+`7` Login to your [Binance Account](https://www.binance.com/fr-FR), go to [Binance Crypto Box](https://www.binance.com/fr-FR/my/wallet/account/payment/cryptobox) press F12 and go to `Network`. After that, enter a valid Crypto Box code. When entered, look for "grabV2" POST method in `Network` section. When found, go to POST method `Request Headers` and copy-paste all the neccessery information (cookie, device_info, id, etc...) from there to `source/config.py`.  
 `8` Run the program
 ```
 python main.py

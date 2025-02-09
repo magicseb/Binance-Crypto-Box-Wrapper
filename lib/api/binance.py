@@ -41,9 +41,9 @@ class BinanceAPI:
 
         response_json = await self.response.json()
         if response_json["success"]:
-            print(f">> [Currency]: {response_json['data']['currency']}")
-            print(f">> [Amount]: {response_json['data']['grabAmountStr']}")
-            return "claimed"
+            print(f">> [Monnaie]: {response_json['data']['currency']}")
+            print(f">> [Montant]: {response_json['data']['grabAmountStr']}")
+            return "réclamé"
 
         elif response_json.get("data", None) and "validateId" in response_json["data"]:
             custom_print(
