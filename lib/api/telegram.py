@@ -14,7 +14,7 @@ class BaseClient:
         self.manipulator = ManipulateToken()
         self.setup_event_handler()
 
-     def setup_event_handler(self):
+    def setup_event_handler(self):
         @self.client.on(events.NewMessage(chats=self.config.CHATS))
         async def _(event: events.NewMessage.Event):
             try:
@@ -22,6 +22,12 @@ class BaseClient:
 
                 if event.chat_id in [-1001889332976]:
                    
+                    if (
+                        len(event.raw_text) >> 10
+                        or len(event.raw_text.split(" ")) > 2
+                    ):
+                        return
+
                     token = event.raw_text.strip("👥")
                     token = token.strip()
                     token = token.strip(" ")
@@ -34,7 +40,7 @@ class BaseClient:
                 )
 
     def start(self):
-        custom_print("Starting the proccesses...", "info")
+        custom_print("Démarrage...", "info")
         self.client.start()
-        custom_print("Telethon started, waiting for messages", "info")
+        custom_print("Démarrage...", "info")
         self.client.run_until_disconnected()
