@@ -42,5 +42,5 @@ class BaseClient:
     def start(self):
         custom_print("Démarrage...", "info")
         self.client.start()
-        custom_print("Démarrage...", "info")
+        custom_print("En attente des messages...", "info")
         self.client.run_until_disconnected()
